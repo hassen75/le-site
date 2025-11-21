@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Métadonnées essentielles pour le navigateur -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Titre de la page (affiché dans l'onglet du navigateur) -->
+    <title>Ma Super Page d'Accueil</title>
+    
+    <!-- Description pour les moteurs de recherche (SEO) -->
+    <meta name="description" content="Bienvenue sur ma superbe page d'accueil créée en HTML.">
+    
+    <!-- Lien vers la feuille de style CSS (pour le design) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- En-tête du site -->
+    <header>
+        <div class="container">
+            <h1>HASSEN MOKDAD</h1>
+            <nav>
+                <ul id="nav-links">
+                    <li><a href="index.html" class="active">Accueil</a></li>
+                    <li><a href="a-propos.html">À Propos</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger" id="hamburger-button">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenu principal de la page -->
+    <main>
+        <!-- Section "Héros" : la première chose que les visiteurs voient -->
+        <section id="hero">
+            <div class="container">
+                <h2>Explorer ma créativité numérique</h2>
+                <p>Ceci est une page d'accueil simple mais moderne. N'hésitez pas à la modifier.</p>
+                <a href="#features" class="cta-button">EN SAVOIR PLUS</a>
+            </div>
+        </section>
+        <!-- Section pour présenter des fonctionnalités ou services -->
+        <section id="features">
+            <div class="container">
+                <h3>Nos fonctionnalités</h3>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <img src="images/tof.png" alt="Illustration pour la fonctionnalité 1" class="feature-image">
+                        <h4>Fonctionnalité 1</h4>
+                        <p>Description courte de la première fonctionnalité incroyable.</p>
+                    </div>
+                    <div class="feature-item">
+                        <video class="feature-video" src="videos/mavideo.mp4" autoplay muted loop playsinline>
+                            Votre navigateur ne supporte pas la lecture de vidéos.
+                        </video>
+                        <h4>Fonctionnalité 2</h4>
+                        <p>Description courte de la deuxième fonctionnalité indispensable.</p>
+                    </div>
+                    <div class="feature-item">
+                        <img src="images/moncv.png" alt="Illustration pour la fonctionnalité 3" class="feature-thumbnail">
+                        <h4>Fonctionnalité 3</h4>
+                        <p>Ici, vous pouvez mettre un lien vers votre CV ou une description de vos compétences.</p>
+                        <a href="images/moncv.png" class="download-button" download="CV-Hassen-Mokdad.png">Télécharger mon CV</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Mon Site Web. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger-button');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>

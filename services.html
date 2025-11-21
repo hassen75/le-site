@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Mon Site Web</title>
+    <meta name="description" content="Découvrez les services que nous proposons.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- En-tête du site -->
+    <header>
+        <div class="container">
+            <h1>HASSEN MOKDAD</h1>
+            <nav>
+                <ul id="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="a-propos.html">À Propos</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger" id="hamburger-button">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenu principal de la page -->
+    <main>
+        <section id="page-content" style="padding: 4rem 0;">
+            <div class="container">
+                <div class="page-header">
+                    <h2>Mes Services</h2>
+                    <p>De la conception graphique à l'intégration web, je propose une gamme complète de services pour donner vie à vos projets digitaux.</p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-item">
+                        <h4>Web Design & UI/UX</h4>
+                        <p>Conception d'interfaces web esthétiques, intuitives et centrées sur l'utilisateur. Création de maquettes et prototypes pour une expérience de navigation optimale.</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>Développement Front-End</h4>
+                        <p>Intégration de maquettes en code HTML, CSS et JavaScript. Création de sites web responsives et performants, compatibles avec tous les appareils.</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>Motion Design & Animation</h4>
+                        <p>Animation de logos, création de vidéos explicatives et de contenus dynamiques pour les réseaux sociaux en utilisant After Effects et Animate.</p>
+                    </div>
+                    <div class="service-item">
+                        <h4>Solutions NoCode & IA</h4>
+                        <p>Développement d'applications et automatisation de processus métier grâce aux outils NoCode et à l'intelligence artificielle, pour des solutions rapides et évolutives.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Mon Site Web. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger-button');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>

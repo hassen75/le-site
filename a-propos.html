@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos - Mon Site Web</title>
+    <meta name="description" content="En savoir plus sur notre histoire et notre mission.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- En-tête du site -->
+    <header>
+        <div class="container">
+            <h1>HASSEN MOKDAD</h1>
+            <nav>
+                <ul id="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="a-propos.html" class="active">À Propos</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger" id="hamburger-button">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenu principal de la page -->
+    <main>
+        <section id="page-content" style="padding: 4rem 0;">
+            <div class="container cv-container">
+                <aside class="cv-sidebar">
+                    <img src="images/profil.jpg" alt="Hassen Mokdad" class="cv-photo">
+                    <div class="cv-section">
+                        <h3>Contact</h3>
+                        <p>06 51 07 14 86</p>
+                        <p>mokdadhassen@yahoo.fr</p>
+                        <p>33 rue des Pyrénées, 75020 Paris</p>
+                    </div>
+                    <div class="cv-section">
+                        <h3>Compétences</h3>
+                        <ul>
+                            <li>Autonomie et force de proposition</li>
+                            <li>Approches graphiques et concepts créatifs</li>
+                            <li>Maîtrise de la suite Adobe (Animate, After Effects, Photoshop, Illustrator, etc.)</li>
+                            <li>Développement Front-End (HTML, CSS, JS)</li>
+                        </ul>
+                    </div>
+                    <div class="cv-section">
+                        <h3>Qualités</h3>
+                        <ul>
+                            <li>Créativité</li>
+                            <li>Capacité d'adaptation</li>
+                            <li>Excellentes compétences relationnelles</li>
+                            <li>Esprit d'équipe</li>
+                        </ul>
+                    </div>
+                </aside>
+                <div class="cv-main">
+                    <div class="cv-header">
+                        <h1>Hassen Mokdad</h1>
+                        <h2>Web Designer</h2>
+                        <p class="cv-summary">Webdesigner polyvalent, je maîtrise aussi bien le design graphique que l'intégration web pour donner vie à des projets digitaux harmonieux et performants.</p>
+                    </div>
+
+                    <div class="cv-section">
+                        <h3>Expérience Professionnelle</h3>
+                        <div class="cv-item">
+                            <h4>2020 - 2023 : Designer Web</h4>
+                            <p><em>Chez Doranco Ecole Supérieure des Technologies Créatives</em></p>
+                        </div>
+                        <div class="cv-item">
+                            <h4>2019 - 2020 : Motion Design</h4>
+                            <p><em>Pour l'agence Papaye Films pédagogique</em></p>
+                        </div>
+                        <div class="cv-item">
+                            <h4>2018 - 2019 : Webdesigner / Intégrateur web</h4>
+                            <p><em>Pour l'agence web et solidaire Colombbus</em></p>
+                        </div>
+                    </div>
+
+                    <div class="cv-section">
+                        <h3>Formations</h3>
+                        <div class="cv-item">
+                            <h4>EN COURS : Certification Transformation Numérique des Entreprises</h4>
+                            <p><em>JANET & Winside - Spécialisation NoCode & IA</em></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Mon Site Web. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger-button');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>
