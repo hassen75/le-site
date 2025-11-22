@@ -558,3 +558,113 @@ footer {
 .service-item p {
     color: #36454F; /* Dark Grey */
 }
+.service-icon {
+    font-size: 2.5rem; /* Agrandit l'emoji */
+    line-height: 1;
+    margin-bottom: 1rem;
+    display: block;
+    background-color: #eef1f5; /* Fond léger */
+    width: 60px;
+    height: 60px;
+    border-radius: 12px; /* Coins arrondis */
+    display: grid;
+    place-items: center; /* Centre parfaitement l'emoji */
+}
+
+/* Section Processus de travail */
+.process-section {
+    margin-top: 5rem;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Une seule colonne par défaut */
+    gap: 2rem;
+    position: relative;
+}
+
+/* Ligne de chronologie verticale (pour les écrans plus larges) */
+@media (min-width: 768px) {
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr); /* Deux colonnes sur grand écran */
+        gap: 4rem 2rem;
+    }
+    .process-grid::before {
+        content: '';
+        position: absolute;
+        top: 20px;
+        bottom: 20px;
+        left: 50%;
+        width: 2px;
+        background-color: #e0e0e0;
+        transform: translateX(-1px);
+    }
+}
+
+.process-step {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    position: relative;
+    border-top: 4px solid #FF7F50; /* Orange */
+}
+
+.process-icon {
+    font-size: 1.5rem;
+    position: absolute;
+    top: -20px;
+    left: 25px;
+    background-color: #FF7F50; /* Orange */
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.process-step h4 {
+    margin-top: 1.5rem; /* Espace pour l'icône */
+    font-size: 1.3rem;
+    color: #36454F; /* Dark Grey */
+}
+
+/* Liste de contacts sur la page CV */
+.cv-contact-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.cv-contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 0.8rem;
+}
+
+.cv-contact-list a {
+    color: #36454F; /* Dark Grey */
+    font-weight: 500;
+    word-break: break-all; /* Pour éviter que l'email ne dépasse sur petit écran */
+}
+
+/* Conteneur responsive pour les vidéos YouTube/Vimeo */
+.video-responsive-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* Ratio 16:9 */
+    height: 0;
+    overflow: hidden;
+    margin: -30px -30px 20px -30px; /* Conserve le style de la carte */
+    border-radius: 12px 12px 0 0;
+}
+
+.video-responsive-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
