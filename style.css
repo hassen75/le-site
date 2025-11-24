@@ -42,6 +42,11 @@ header .container {
     align-items: center;
 }
 
+header h1 a {
+    color: inherit;
+    text-decoration: none;
+}
+
 header h1 {
     margin: 0;
     font-size: 1.8rem;
@@ -209,19 +214,17 @@ body::before {
 }
 
 .feature-image {
-    max-width: 100%; /* L'image prend toute la largeur de la carte */
+    max-width: 100%;
     height: auto;
-    margin: -30px -30px 20px -30px;
-    width: calc(100% + 60px); /* Compense le padding pour occuper tout l'espace */
-    border-radius: 12px 12px 0 0; /* Arrondit les coins supérieurs pour correspondre à la carte */
+    margin: 20px 0;
+    border-radius: 8px; /* Coins arrondis standards */
 }
 
 .feature-video {
     max-width: 100%; /* La vidéo prend toute la largeur de la carte */
     height: auto;
-    margin: -30px -30px 20px -30px;
-    width: calc(100% + 60px); /* Compense le padding pour occuper tout l'espace */
-    border-radius: 12px 12px 0 0; /* Arrondit les coins supérieurs pour correspondre à la carte */
+    margin: 20px 0;
+    border-radius: 8px; /* Arrondit les coins supérieurs pour correspondre à la carte */
     object-fit: cover; /* S'assure que la vidéo couvre bien l'espace */
 }
 
@@ -237,8 +240,25 @@ body::before {
 
 .feature-item h4 {
     font-size: 1.4rem;
-    margin-top: 0;
     color: #0047AB; /* Blue */
+    position: relative;
+    display: inline-block;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    margin-bottom: 0; /* Supprime la marge sous le titre */
+}
+
+.feature-item h4::after {
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 60%;
+    left: -10%;
+    bottom: -5px;
+    background-color: rgba(0, 71, 171, 0.2); /* Transparent Blue */
+    z-index: -1;
+    transform: rotate(-2deg);
+    border-radius: 50% 40% 50% 40% / 40% 50% 40% 50%;
 }
 
 /* Bouton de téléchargement pour le CV */
@@ -655,7 +675,7 @@ footer {
     padding-bottom: 56.25%; /* Ratio 16:9 */
     height: 0;
     overflow: hidden;
-    margin: -30px -30px 20px -30px; /* Conserve le style de la carte */
+    margin: 20px -30px 20px -30px; /* Ajuste la marge supérieure pour coller au titre */
     border-radius: 12px 12px 0 0;
 }
 
@@ -686,4 +706,8 @@ footer {
 /* Marge pour la section références sur la page services */
 .references-section {
     margin-top: 5rem;
+}
+
+.video-responsive-wrapper + p {
+    margin-top: 20px;
 }

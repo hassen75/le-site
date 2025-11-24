@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Mon Site Web</title>
-    <meta name="description" content="Contactez-nous pour toute question ou demande.">
+    <title>Références - Hassen Mokdad</title>
+    <meta name="description" content="Découvrez les entreprises qui m'ont fait confiance pour leurs projets digitaux.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,9 +17,9 @@
                 <ul id="nav-links">
                     <li><a href="index.html">Accueil</a></li>
                     <li><a href="a-propos.html">À Propos</a></li>
-                    <li><a href="references.html">Références</a></li>
+                    <li><a href="references.html" class="active">Références</a></li>
                     <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
             <div class="hamburger" id="hamburger-button">
@@ -35,26 +35,14 @@
         <section id="page-content" style="padding: 4rem 0;">
             <div class="container">
                 <div class="page-header">
-                    <h2>Me Contacter</h2>
-                    <p>Une question, un projet ? N'hésitez pas à me contacter directement ou à utiliser le formulaire ci-dessous.</p>
+                    <h2>Ils m'ont fait confiance</h2>
                 </div>
 
-                <!-- Formulaire de contact -->
-                <form action="https://formspree.io/f/mzzwdyje" method="post" class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Nom</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-button">Envoyer le message</button>
-                </form>
+                <div class="logos-grid">
+                    <img src="images/dajm.png" alt="Logo DAJM">
+                    <img src="images/papaye.jpg" alt="Logo Papaye">
+                    <img src="images/colombbus.png" alt="Logo Colombbus">
+                </div>
             </div>
         </section>
     </main>
@@ -69,7 +57,6 @@
     <script>
         const hamburger = document.getElementById('hamburger-button');
         const navLinks = document.getElementById('nav-links');
-
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('active');
             hamburger.classList.toggle('active');
