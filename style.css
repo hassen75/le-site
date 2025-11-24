@@ -4,16 +4,59 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #F5F5DC; /* Off-White */
-    color: #36454F; /* Dark Grey */
+    background-color: #F5F5DC;
+    /* Off-White */
+    color: #36454F;
+    /* Dark Grey */
 }
 
-h1, h2, h3, h4 {
+/* =========================================
+   STYLE DES LISTES A PUCES (PICTOGRAMMES)
+   ========================================= */
+
+/* On retire les points noirs par défaut et on ajuste les marges */
+.feature-item ul.skills-list {
+    list-style: none;
+    /* Enlève les points */
+    padding-left: 0;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+/* Espacement entre chaque ligne */
+.feature-item ul.skills-list li {
+    margin-bottom: 10px;
+    display: flex;
+    /* Aligne l'icône et le texte parfaitement */
+    align-items: center;
+    font-size: 1rem;
+    /* Taille du texte */
+}
+
+/* Style spécifique pour les icônes (couleur et taille) */
+.feature-item ul.skills-list li i {
+    color: #FF7F50;
+    /* Couleur Orange */
+    width: 30px;
+    /* Espace réservé pour l'icône */
+    text-align: center;
+    /* Centre l'icône dans son espace */
+    font-size: 1.1rem;
+    /* Taille de l'icône */
+    margin-right: 10px;
+    /* Espace entre l'icône et le texte */
+}
+
+h1,
+h2,
+h3,
+h4 {
     line-height: 1.2;
 }
 
 a {
-    color: #FF7F50; /* Orange */
+    color: #FF7F50;
+    /* Orange */
     text-decoration: none;
 }
 
@@ -29,11 +72,13 @@ a {
 header {
     background-color: #fff;
     padding: 1rem 0;
-    border-bottom: 1px solid #e8e8e0; /* Lighter Off-White shade */
+    border-bottom: 1px solid #e8e8e0;
+    /* Lighter Off-White shade */
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(54, 69, 79, 0.07); /* Dark Grey shadow */
+    box-shadow: 0 2px 5px rgba(54, 69, 79, 0.07);
+    /* Dark Grey shadow */
 }
 
 header .container {
@@ -50,7 +95,8 @@ header h1 a {
 header h1 {
     margin: 0;
     font-size: 1.8rem;
-    color: #36454F; /* Dark Grey */
+    color: #36454F;
+    /* Dark Grey */
 }
 
 header nav ul {
@@ -65,7 +111,8 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: #36454F; /* Dark Grey */
+    color: #36454F;
+    /* Dark Grey */
     font-weight: 600;
     padding: 5px 10px;
     border-radius: 5px;
@@ -74,19 +121,23 @@ header nav ul li a {
 
 header nav ul li a:hover,
 header nav ul li a:focus {
-    background-color: #FF7F50; /* Orange */
+    background-color: #FF7F50;
+    /* Orange */
     color: #fff;
 }
 
 /* Style pour le lien de navigation de la page active */
 header nav ul li a.active {
-    color: #FF7F50; /* Orange */
-    font-weight: 700; /* Un peu plus gras pour ressortir */
+    color: #FF7F50;
+    /* Orange */
+    font-weight: 700;
+    /* Un peu plus gras pour ressortir */
 }
 
 /* Section "Héros" (Hero) */
 #hero {
-    background-color: #0047AB; /* Blue */
+    background-color: #0047AB;
+    /* Blue */
     color: #fff;
     padding: 5rem 0;
     text-align: center;
@@ -100,7 +151,8 @@ body::before {
     left: -100px;
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, rgba(255, 127, 80, 0.1), transparent 60%); /* Orange transparent */
+    background: radial-gradient(circle, rgba(255, 127, 80, 0.1), transparent 60%);
+    /* Orange transparent */
     transform: rotate(45deg);
     z-index: -1;
     opacity: 0.5;
@@ -113,17 +165,22 @@ body::before {
     font-size: 2.8rem;
     margin-bottom: 1rem;
     display: inline-block;
-    overflow: hidden; /* Cache le texte qui n'est pas encore "tapé" */
-    white-space: nowrap; /* Empêche le texte de passer à la ligne */
-    border-right: .1em solid #FF7F50; /* Le curseur qui clignote */
-    animation: 
+    overflow: hidden;
+    /* Cache le texte qui n'est pas encore "tapé" */
+    white-space: nowrap;
+    /* Empêche le texte de passer à la ligne */
+    border-right: .1em solid #FF7F50;
+    /* Le curseur qui clignote */
+    animation:
         typing 3.5s steps(32, end) forwards,
         blink-caret .75s step-end infinite;
-    width: 0; /* Le texte est initialement invisible */
+    width: 0;
+    /* Le texte est initialement invisible */
 }
 
 #hero h2.fully-visible {
-    width: auto; /* Une fois l'animation finie, la largeur est normale */
+    width: auto;
+    /* Une fois l'animation finie, la largeur est normale */
 }
 
 #hero p {
@@ -136,7 +193,8 @@ body::before {
 
 .cta-button {
     display: inline-block;
-    background-color: #FF7F50; /* Orange */
+    background-color: #FF7F50;
+    /* Orange */
     color: #fff;
     padding: 12px 25px;
     border-radius: 25px;
@@ -146,7 +204,8 @@ body::before {
 }
 
 .cta-button:hover {
-    background-color: #E06C40; /* Darker Orange */
+    background-color: #E06C40;
+    /* Darker Orange */
     transform: translateY(-2px);
 }
 
@@ -162,20 +221,23 @@ body::before {
 }
 
 /* Effet coup de pinceau sous les titres de section */
-#features h3, #page-content h2 {
+#features h3,
+#page-content h2 {
     position: relative;
     display: inline-block;
     padding: 0 10px;
 }
 
-#features h3::after, #page-content h2::after {
+#features h3::after,
+#page-content h2::after {
     content: '';
     position: absolute;
     width: 120%;
     height: 60%;
     left: -10%;
     bottom: -5px;
-    background-color: rgba(85, 107, 47, 0.2); /* Olive Green transparent */
+    background-color: rgba(85, 107, 47, 0.2);
+    /* Olive Green transparent */
     z-index: -1;
     transform: rotate(-2deg);
     border-radius: 50% 40% 50% 40% / 40% 50% 40% 50%;
@@ -189,20 +251,27 @@ body::before {
 .feature-item {
     background-color: #fff;
     padding: 30px;
-    border-radius: 12px; /* Coins un peu plus arrondis */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border-radius: 12px;
+    /* Coins un peu plus arrondis */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center; /* Centre le contenu du bloc */
-    opacity: 0; /* Initialement invisible pour l'animation d'entrée */
-    animation: fadeInUp 0.6s ease-out forwards; /* Animation d'apparition */
+    text-align: center;
+    /* Centre le contenu du bloc */
+    opacity: 0;
+    /* Initialement invisible pour l'animation d'entrée */
+    animation: fadeInUp 0.6s ease-out forwards;
+    /* Animation d'apparition */
 }
 
 .feature-item:hover {
     transform: translateY(-10px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
-.feature-image, .feature-video, .feature-thumbnail, .about-image {
+.feature-image,
+.feature-video,
+.feature-thumbnail,
+.about-image {
     /* On retire le filtre monochrome */
 }
 
@@ -217,35 +286,43 @@ body::before {
     max-width: 100%;
     height: auto;
     margin: 20px 0;
-    border-radius: 8px; /* Coins arrondis standards */
+    border-radius: 8px;
+    /* Coins arrondis standards */
 }
 
 .feature-video {
-    max-width: 100%; /* La vidéo prend toute la largeur de la carte */
+    max-width: 100%;
+    /* La vidéo prend toute la largeur de la carte */
     height: auto;
     margin: 20px 0;
-    border-radius: 8px; /* Arrondit les coins supérieurs pour correspondre à la carte */
-    object-fit: cover; /* S'assure que la vidéo couvre bien l'espace */
+    border-radius: 8px;
+    /* Arrondit les coins supérieurs pour correspondre à la carte */
+    object-fit: cover;
+    /* S'assure que la vidéo couvre bien l'espace */
 }
 
 .feature-thumbnail {
     max-width: 120px;
     height: 120px;
-    border-radius: 8px; /* Rend l'image rectangulaire avec des coins arrondis */
-    object-fit: cover; /* S'assure que l'image remplit le cercle sans être déformée */
+    border-radius: 8px;
+    /* Rend l'image rectangulaire avec des coins arrondis */
+    object-fit: cover;
+    /* S'assure que l'image remplit le cercle sans être déformée */
     margin-bottom: 1rem;
     border: 4px solid #fff;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .feature-item h4 {
     font-size: 1.4rem;
-    color: #0047AB; /* Blue */
+    color: #0047AB;
+    /* Blue */
     position: relative;
     display: inline-block;
     padding: 0 10px;
     margin-bottom: 20px;
-    margin-bottom: 0; /* Supprime la marge sous le titre */
+    margin-bottom: 0;
+    /* Supprime la marge sous le titre */
 }
 
 .feature-item h4::after {
@@ -255,7 +332,8 @@ body::before {
     height: 60%;
     left: -10%;
     bottom: -5px;
-    background-color: rgba(0, 71, 171, 0.2); /* Transparent Blue */
+    background-color: rgba(0, 71, 171, 0.2);
+    /* Transparent Blue */
     z-index: -1;
     transform: rotate(-2deg);
     border-radius: 50% 40% 50% 40% / 40% 50% 40% 50%;
@@ -266,7 +344,8 @@ body::before {
     display: inline-block;
     margin-top: 1rem;
     padding: 10px 20px;
-    background-color: #0047AB; /* Blue */
+    background-color: #0047AB;
+    /* Blue */
     color: #fff;
     border-radius: 20px;
     font-weight: 600;
@@ -274,7 +353,8 @@ body::before {
 }
 
 .download-button:hover {
-    background-color: #003380; /* Darker Blue */
+    background-color: #003380;
+    /* Darker Blue */
     transform: translateY(-2px);
 }
 
@@ -284,6 +364,7 @@ body::before {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -292,21 +373,36 @@ body::before {
 
 /* Keyframes pour l'animation d'écriture */
 @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
 }
 
 /* Keyframes pour le clignotement du curseur */
 @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: #FF7F50; } /* Orange */
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: #FF7F50;
+    }
+
+    /* Orange */
 }
 
 
 
 /* Pied de page (Footer) */
 footer {
-    background-color: #36454F; /* Dark Grey */
+    background-color: #36454F;
+    /* Dark Grey */
     color: #fff;
     text-align: center;
     padding: 2rem 0;
@@ -320,7 +416,7 @@ footer {
     padding: 2rem;
     background: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
 .form-group {
@@ -342,12 +438,14 @@ footer {
     border-radius: 5px;
     font-size: 1rem;
     font-family: inherit;
-    box-sizing: border-box; /* Assure que le padding n'augmente pas la largeur */
+    box-sizing: border-box;
+    /* Assure que le padding n'augmente pas la largeur */
 }
 
 .submit-button {
     display: inline-block;
-    background-color: #FF7F50; /* Orange */
+    background-color: #FF7F50;
+    /* Orange */
     color: #fff;
     padding: 12px 25px;
     border: none;
@@ -359,13 +457,15 @@ footer {
 }
 
 .submit-button:hover {
-    background-color: #E06C40; /* Darker Orange */
+    background-color: #E06C40;
+    /* Darker Orange */
     transform: translateY(-2px);
 }
 
 /* Menu Hamburger pour mobile */
 .hamburger {
-    display: none; /* Caché par défaut sur grand écran */
+    display: none;
+    /* Caché par défaut sur grand écran */
     cursor: pointer;
     flex-direction: column;
     gap: 5px;
@@ -374,7 +474,8 @@ footer {
 .hamburger .bar {
     width: 25px;
     height: 3px;
-    background-color: #36454F; /* Dark Grey */
+    background-color: #36454F;
+    /* Dark Grey */
     border-radius: 5px;
     transition: all 0.3s ease-in-out;
 }
@@ -400,14 +501,16 @@ footer {
 }
 
 .about-text {
-    flex: 1; /* Le texte prend l'espace disponible */
+    flex: 1;
+    /* Le texte prend l'espace disponible */
 }
 
 .about-image {
-    flex-basis: 40%; /* L'image occupe 40% de la largeur */
+    flex-basis: 40%;
+    /* L'image occupe 40% de la largeur */
     max-width: 400px;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Pour les petits écrans, on passe en colonne */
@@ -417,23 +520,27 @@ footer {
     }
 
     .hamburger {
-        display: flex; /* Affiché sur petit écran */
+        display: flex;
+        /* Affiché sur petit écran */
     }
 
     header nav ul {
-        display: none; /* Cache la nav par défaut */
+        display: none;
+        /* Cache la nav par défaut */
         flex-direction: column;
         width: 100%;
         background-color: #fff;
         position: absolute;
-        top: 70px; /* Hauteur de l'en-tête */
+        top: 70px;
+        /* Hauteur de l'en-tête */
         left: 0;
         padding: 20px 0;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     header nav ul.active {
-        display: flex; /* Affiche la nav quand elle est active */
+        display: flex;
+        /* Affiche la nav quand elle est active */
     }
 
     header nav ul li {
@@ -466,11 +573,12 @@ footer {
     height: 180px;
     border-radius: 50%;
     object-fit: cover;
-    object-position: top left; /* Cadrer sur le haut à gauche de l'image */
+    object-position: top left;
+    /* Cadrer sur le haut à gauche de l'image */
     display: block;
     margin: 0 auto 2rem auto;
     border: 5px solid #fff;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 .cv-section {
@@ -479,8 +587,10 @@ footer {
 
 .cv-section h3 {
     font-size: 1.5rem;
-    color: #0047AB; /* Blue */
-    border-bottom: 2px solid #FF7F50; /* Orange */
+    color: #0047AB;
+    /* Blue */
+    border-bottom: 2px solid #FF7F50;
+    /* Orange */
     padding-bottom: 10px;
     margin-bottom: 1rem;
 }
@@ -488,7 +598,8 @@ footer {
 .cv-sidebar .cv-section p,
 .cv-sidebar .cv-section li {
     font-size: 0.95rem;
-    color: #36454F; /* Dark Grey */
+    color: #36454F;
+    /* Dark Grey */
 }
 
 .cv-sidebar .cv-section ul {
@@ -498,13 +609,15 @@ footer {
 
 .cv-header h1 {
     font-size: 3rem;
-    color: #36454F; /* Dark Grey */
+    color: #36454F;
+    /* Dark Grey */
     margin-bottom: 0;
 }
 
 .cv-header h2 {
     font-size: 1.8rem;
-    color: #FF7F50; /* Orange */
+    color: #FF7F50;
+    /* Orange */
     margin-top: 0;
     font-weight: 400;
 }
@@ -521,13 +634,15 @@ footer {
 
 .cv-item h4 {
     font-size: 1.2rem;
-    color: #36454F; /* Dark Grey */
+    color: #36454F;
+    /* Dark Grey */
     margin-bottom: 5px;
 }
 
 .cv-item p {
     margin-top: 0;
-    color: #36454F; /* Dark Grey */
+    color: #36454F;
+    /* Dark Grey */
 }
 
 /* Styles pour la page Services */
@@ -543,7 +658,8 @@ footer {
 
 .page-header p {
     font-size: 1.1rem;
-    color: #36454F; /* Dark Grey */
+    color: #36454F;
+    /* Dark Grey */
     max-width: 700px;
     margin: 0 auto;
 }
@@ -558,36 +674,44 @@ footer {
     background-color: #fff;
     padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    border-left: 5px solid #0047AB; /* Blue */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid #0047AB;
+    /* Blue */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-item:hover {
     transform: translateY(-10px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
 .service-item h4 {
     font-size: 1.4rem;
-    color: #36454F; /* Dark Grey */
+    color: #36454F;
+    /* Dark Grey */
     margin-bottom: 1rem;
 }
 
 .service-item p {
-    color: #36454F; /* Dark Grey */
+    color: #36454F;
+    /* Dark Grey */
 }
+
 .service-icon {
-    font-size: 2.5rem; /* Agrandit l'emoji */
+    font-size: 2.5rem;
+    /* Agrandit l'emoji */
     line-height: 1;
     margin-bottom: 1rem;
     display: block;
-    background-color: #eef1f5; /* Fond léger */
+    background-color: #eef1f5;
+    /* Fond léger */
     width: 60px;
     height: 60px;
-    border-radius: 12px; /* Coins arrondis */
+    border-radius: 12px;
+    /* Coins arrondis */
     display: grid;
-    place-items: center; /* Centre parfaitement l'emoji */
+    place-items: center;
+    /* Centre parfaitement l'emoji */
 }
 
 /* Section Processus de travail */
@@ -597,7 +721,8 @@ footer {
 
 .process-grid {
     display: grid;
-    grid-template-columns: 1fr; /* Une seule colonne par défaut */
+    grid-template-columns: 1fr;
+    /* Une seule colonne par défaut */
     gap: 2rem;
     position: relative;
 }
@@ -605,9 +730,11 @@ footer {
 /* Ligne de chronologie verticale (pour les écrans plus larges) */
 @media (min-width: 768px) {
     .process-grid {
-        grid-template-columns: repeat(2, 1fr); /* Deux colonnes sur grand écran */
+        grid-template-columns: repeat(2, 1fr);
+        /* Deux colonnes sur grand écran */
         gap: 4rem 2rem;
     }
+
     .process-grid::before {
         content: '';
         position: absolute;
@@ -624,9 +751,10 @@ footer {
     background-color: #fff;
     padding: 25px;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     position: relative;
-    border-top: 4px solid #FF7F50; /* Orange */
+    border-top: 4px solid #FF7F50;
+    /* Orange */
 }
 
 .process-icon {
@@ -634,20 +762,23 @@ footer {
     position: absolute;
     top: -20px;
     left: 25px;
-    background-color: #FF7F50; /* Orange */
+    background-color: #FF7F50;
+    /* Orange */
     color: #fff;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     display: grid;
     place-items: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .process-step h4 {
-    margin-top: 1.5rem; /* Espace pour l'icône */
+    margin-top: 1.5rem;
+    /* Espace pour l'icône */
     font-size: 1.3rem;
-    color: #36454F; /* Dark Grey */
+    color: #36454F;
+    /* Dark Grey */
 }
 
 /* Liste de contacts sur la page CV */
@@ -664,18 +795,22 @@ footer {
 }
 
 .cv-contact-list a {
-    color: #36454F; /* Dark Grey */
+    color: #36454F;
+    /* Dark Grey */
     font-weight: 500;
-    word-break: break-all; /* Pour éviter que l'email ne dépasse sur petit écran */
+    word-break: break-all;
+    /* Pour éviter que l'email ne dépasse sur petit écran */
 }
 
 /* Conteneur responsive pour les vidéos YouTube/Vimeo */
 .video-responsive-wrapper {
     position: relative;
-    padding-bottom: 56.25%; /* Ratio 16:9 */
+    padding-bottom: 56.25%;
+    /* Ratio 16:9 */
     height: 0;
     overflow: hidden;
-    margin: 20px -30px 20px -30px; /* Ajuste la marge supérieure pour coller au titre */
+    margin: 20px -30px 20px -30px;
+    /* Ajuste la marge supérieure pour coller au titre */
     border-radius: 12px 12px 0 0;
 }
 
@@ -699,8 +834,10 @@ footer {
 }
 
 .logos-grid img {
-    max-height: 80px; /* Hauteur maximale pour uniformiser */
-    max-width: 180px; /* Largeur maximale */
+    max-height: 80px;
+    /* Hauteur maximale pour uniformiser */
+    max-width: 180px;
+    /* Largeur maximale */
 }
 
 /* Marge pour la section références sur la page services */
@@ -708,6 +845,6 @@ footer {
     margin-top: 5rem;
 }
 
-.video-responsive-wrapper + p {
+.video-responsive-wrapper+p {
     margin-top: 20px;
 }
