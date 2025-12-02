@@ -170,8 +170,14 @@ body::before {
     opacity: 0.5;
 }
 
-
-
+/* Section Héros */
+#hero {
+    background: linear-gradient(#0742A3, #0A4DBF);
+    color: #fff;
+    padding: 5rem 0;
+    text-align: center;
+    animation: fadeIn 0.8s ease-out;
+}
 
 #hero h1 {
     font-size: 2.8rem;
@@ -184,6 +190,18 @@ body::before {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* Animation d'apparition */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .cta-button {
