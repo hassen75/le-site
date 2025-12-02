@@ -106,7 +106,9 @@ header h1 {
 }
 
 .logo {
-    height: 50px;
+    height: 32px;      /* ou 36px si tu préfères */
+    width: auto;       /* garde les proportions */
+    display: block;
 }
 
 header nav ul {
