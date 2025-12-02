@@ -176,19 +176,8 @@ body::before {
 #hero h2 {
     font-size: 2.8rem;
     margin-bottom: 1rem;
-    display: inline-block;
-    overflow: hidden;
-    /* Cache le texte qui n'est pas encore "tapé" */
-    white-space: nowrap;
-    /* Empêche le texte de passer à la ligne */
-    border-right: .1em solid #FF7F50;
-    /* Le curseur qui clignote */
-    animation:
-        typing 3.5s steps(32, end) forwards,
-        blink-caret .75s step-end 5;
-    width: 0;
-    /* Le texte est initialement invisible */
 }
+
 
 #hero h2.fully-visible {
     width: auto;
@@ -384,29 +373,22 @@ body::before {
 }
 
 /* Keyframes pour l'animation d'écriture */
-@keyframes typing {
-    from {
-        width: 0
-    }
-
-    to {
-        width: 100%
-    }
+#cursor {
+  display: inline-block;
+  margin-left: 4px;
+  font-weight: 300;
+  animation: blink 0.7s infinite;
 }
 
-/* Keyframes pour le clignotement du curseur */
-@keyframes blink-caret {
+@keyframes blink {
+  0%   { opacity: 1; }
+  50%  { opacity: 0; }
+  100% { opacity: 1; }
+}
 
-    from,
-    to {
-        border-color: transparent
-    }
-
-    50% {
-        border-color: #FF7F50;
-    }
-
-    /* Orange */
+.hide-cursor {
+  opacity: 0;
+  animation: none;
 }
 
 
