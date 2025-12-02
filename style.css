@@ -380,10 +380,11 @@ body::before {
   100% { opacity: 1; }
 }
 
-.hide-cursor {
+#cursor.hide-cursor {
   opacity: 0;
-  animation: none;
+  animation: none !important;
 }
+
 
 
 
