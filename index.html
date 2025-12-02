@@ -47,6 +47,7 @@
     <!-- Contenu principal de la page -->
     <main>
         <!-- Section "Héros" : la première chose que les visiteurs voient -->
+<<<<<<< HEAD
         <section id="hero">
             <div class="container">
                 <h1 class="typewriter">
@@ -58,6 +59,19 @@
                 <a href="#features" class="cta-button">Découvrir mes projets</a>
             </div>
         </section>
+=======
+   <section id="hero">
+    <div class="container">
+        <h1 class="typewriter">
+            <span id="text"></span><span id="cursor">|</span>
+        </h1>
+
+        <p class="subtitle">Création de sites modernes, design élégant et solutions digitales sur mesure.</p>
+
+        <a href="#features" class="cta-button">Découvrir mes projets</a>
+    </div>
+</section>
+>>>>>>> af3918af52514d489512ec81def75ab55634c828
 
         <!-- Section pour présenter des fonctionnalités ou services -->
         <section id="features">
@@ -155,6 +169,7 @@
         });
     </script>
     <script>
+<<<<<<< HEAD
         const text = "Explorer ma créativité numérique";
         const speed = 80;
         let i = 0;
@@ -184,6 +199,24 @@
             },
         });
     </script>
+=======
+  const text = "Explorer ma créativité numérique";
+  const speed = 80;
+  let i = 0;
+
+  function typeWriter() {
+    if (i < text.length) {
+      document.getElementById("text").textContent += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+    } else {
+      document.getElementById("cursor").classList.add("hide-cursor");
+    }
+  }
+
+  window.addEventListener('load', typeWriter);
+</script>
+>>>>>>> af3918af52514d489512ec81def75ab55634c828
 
 </body>
 
