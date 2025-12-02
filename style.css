@@ -171,14 +171,14 @@ body::before {
 }
 
 /* Section Héros */
-#hero .subtitle {
+
+#hero p.subtitle {
     font-size: 1.3rem;
     font-weight: 300;
     margin-top: -10px;
     margin-bottom: 2rem;
     opacity: 0.9;
 }
-
 #hero {
     background: linear-gradient(#0742A3, #0A4DBF);
     color: #fff;
