@@ -203,24 +203,23 @@ body::before {
         transform: translateY(0);
     }
 }
-
 .cta-button {
     display: inline-block;
-    background-color: #FF7F50;
-    /* Orange */
+    background-color: #FF7F50; /* Orange */
     color: #fff;
     padding: 12px 25px;
     border-radius: 25px;
     font-weight: bold;
     text-transform: uppercase;
     transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Ombre premium */
 }
 
 .cta-button:hover {
-    background-color: #E06C40;
-    /* Darker Orange */
+    background-color: #E06C40; /* Darker Orange */
     transform: translateY(-2px);
 }
+
 
 /* Section des fonctionnalités (Features) */
 #features {
