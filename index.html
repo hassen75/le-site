@@ -15,6 +15,7 @@
 
     <!-- Lien vers la feuille de style CSS (pour le design) -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 
 <body>
@@ -23,9 +24,9 @@
     <header>
         <div class="container">
             <div class="logo-area">
-            <a href="index.html"><img src="images/logo.png" alt="logo" class="logo"></a>
-            <h1><a href="index.html" style="text-decoration: none; color: inherit;">HASSEN MOKDAD</a></h1>
-        </div>
+                <a href="index.html"><img src="images/logo.png" alt="logo" class="logo"></a>
+                <h1><a href="index.html" style="text-decoration: none; color: inherit;">HASSEN MOKDAD</a></h1>
+            </div>
             <nav>
                 <ul id="nav-links">
                     <li><a href="index.html" class="active">Accueil</a></li>
@@ -48,11 +49,16 @@
         <!-- Section "Héros" : la première chose que les visiteurs voient -->
         <section id="hero">
             <div class="container">
-                <h2>Explorer ma créativité numérique</h2>
-                
-                <a href="#features" class="cta-button">EN SAVOIR PLUS</a>
+                <h1 class="typewriter">
+                    <span id="text"></span><span id="cursor">|</span>
+                </h1>
+
+                <p class="subtitle">Création de sites modernes, design élégant et solutions digitales sur mesure.</p>
+
+                <a href="#features" class="cta-button">Découvrir mes projets</a>
             </div>
         </section>
+
         <!-- Section pour présenter des fonctionnalités ou services -->
         <section id="features">
             <div class="container">
@@ -97,9 +103,33 @@
                             Animation pour l'agence Papaye.
                         </p>
                     </div>
-                    <div class="feature-item">
+                    <div class="feature-item maquettiste">
+
                         <h4>Maquettiste</h4>
-                        <img src="images/magazine.png" alt="Illustration pour maquettiste" class="feature-image">
+                        <!-- Swiper -->
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="images/visuel0.jpg" alt="Maquette 1"></div>
+                                <div class="swiper-slide"><img src="images/visuel1.jpg" alt="Maquette 2"></div>
+                                <div class="swiper-slide"><img src="images/visuel2.jpg" alt="Maquette 3"></div>
+                                <div class="swiper-slide"><img src="images/visuel3.jpg" alt="Maquette 4"></div>
+                                <div class="swiper-slide"><img src="images/visuel4.jpg" alt="Maquette 5"></div>
+                                <div class="swiper-slide"><img src="images/visuel 5.jpg" alt="Maquette 6"></div>
+                                <div class="swiper-slide"><img src="images/visuel6.jpg" alt="Maquette 7"></div>
+                                <div class="swiper-slide"><img src="images/visuel7.jpg" alt="Maquette 1"></div>
+                                <div class="swiper-slide"><img src="images/visuel8.jpg" alt="Maquette 2"></div>
+                                <div class="swiper-slide"><img src="images/visuel9.jpg" alt="Maquette 3"></div>
+                                <div class="swiper-slide"><img src="images/visuel10.jpg" alt="Maquette 4"></div>
+                                <div class="swiper-slide"><img src="images/visuel11.jpg" alt="Maquette 5"></div>
+                                <div class="swiper-slide"><img src="images/visuel12.jpg" alt="Maquette 6"></div>
+
+                            </div>
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination"></div>
+                            <!-- Add Navigation -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                        </div>
                         <p>Création et mise en page de magazines, brochures et autres supports de communication.</p>
                     </div>
                 </div>
@@ -114,6 +144,7 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         const hamburger = document.getElementById('hamburger-button');
         const navLinks = document.getElementById('nav-links');
@@ -121,6 +152,36 @@
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('active');
             hamburger.classList.toggle('active');
+        });
+    </script>
+    <script>
+        const text = "Explorer ma créativité numérique";
+        const speed = 80;
+        let i = 0;
+
+        function typeWriter() {
+            if (i < text.length) {
+                document.getElementById("text").textContent += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            } else {
+                document.getElementById("cursor").classList.add("hide-cursor");
+            }
+        }
+
+        window.addEventListener('load', typeWriter);
+    </script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
         });
     </script>
 

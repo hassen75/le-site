@@ -170,29 +170,26 @@ body::before {
     opacity: 0.5;
 }
 
+/* Section Héros */
 
-
-
-#hero h2 {
-    font-size: 2.8rem;
-    margin-bottom: 1rem;
-    display: inline-block;
-    overflow: hidden;
-    /* Cache le texte qui n'est pas encore "tapé" */
-    white-space: nowrap;
-    /* Empêche le texte de passer à la ligne */
-    border-right: .1em solid #FF7F50;
-    /* Le curseur qui clignote */
-    animation:
-        typing 3.5s steps(32, end) forwards,
-        blink-caret .75s step-end 5;
-    width: 0;
-    /* Le texte est initialement invisible */
+#hero p.subtitle {
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-top: -10px;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+#hero {
+    background: linear-gradient(#0742A3, #0A4DBF);
+    color: #fff;
+    padding: 5rem 0;
+    text-align: center;
+    animation: fadeIn 0.8s ease-out;
 }
 
-#hero h2.fully-visible {
-    width: auto;
-    /* Une fois l'animation finie, la largeur est normale */
+#hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
 }
 
 #hero p {
@@ -203,23 +200,34 @@ body::before {
     margin-right: auto;
 }
 
+/* Animation d'apparition */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 .cta-button {
     display: inline-block;
-    background-color: #FF7F50;
-    /* Orange */
+    background-color: #FF7F50; /* Orange */
     color: #fff;
     padding: 12px 25px;
     border-radius: 25px;
     font-weight: bold;
     text-transform: uppercase;
     transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Ombre premium */
 }
 
 .cta-button:hover {
-    background-color: #E06C40;
-    /* Darker Orange */
+    background-color: #E06C40; /* Darker Orange */
     transform: translateY(-2px);
 }
+
 
 /* Section des fonctionnalités (Features) */
 #features {
@@ -384,32 +392,23 @@ body::before {
 }
 
 /* Keyframes pour l'animation d'écriture */
-@keyframes typing {
-    from {
-        width: 0
-    }
-
-    to {
-        width: 100%
-    }
+#cursor {
+  display: inline-block;
+  margin-left: 4px;
+  font-weight: 300;
+  animation: blink 0.7s infinite;
 }
 
-/* Keyframes pour le clignotement du curseur */
-@keyframes blink-caret {
-
-    from,
-    to {
-        border-color: transparent
-    }
-
-    50% {
-        border-color: #FF7F50;
-    }
-
-    /* Orange */
+@keyframes blink {
+  0%   { opacity: 1; }
+  50%  { opacity: 0; }
+  100% { opacity: 1; }
 }
 
-
+#cursor.hide-cursor {
+  opacity: 0;
+  animation: none !important;
+}
 
 /* Pied de page (Footer) */
 footer {
@@ -857,6 +856,91 @@ footer {
     margin-top: 5rem;
 }
 
-.video-responsive-wrapper+p {
+.video-responsive-wrapper + p {
     margin-top: 20px;
+}
+
+
+/* =========================================
+   MAQUETTISTE – SWIPER FIX
+   (slider propre, sans débordement)
+========================================= */
+
+/* Carte Maquettiste : on la limite et on la centre */
+.feature-item.maquettiste {
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;        /* coupe tout débordement horizontal */
+    padding-bottom: 25px;
+}
+
+/* Conteneur Swiper dans la carte */
+.feature-item.maquettiste .swiper-container {
+    width: 100%;
+    margin: 20px auto 10px auto;
+    padding: 0;
+}
+
+/* Slides centrés */
+.feature-item.maquettiste .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Images : pas plus larges que la carte */
+.feature-item.maquettiste .swiper-slide img {
+    max-width: 95%;
+    height: auto;
+    max-height: 420px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Flèches Swiper */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #0047AB !important;
+}
+
+/* Pagination */
+.swiper-pagination-bullet {
+    background: #0047AB !important;
+    opacity: 0.6;
+}
+
+.swiper-pagination-bullet-active {
+    background: #FF7F50 !important;
+    opacity: 1;
+}
+/* Micro-ajustements Maquettiste */
+
+.feature-item.maquettiste {
+    padding-top: 35px;          /* un peu d’air au-dessus du slider */
+}
+
+.feature-item.maquettiste .swiper-container {
+    padding: 0 20px;            /* un peu d’air à l’intérieur à gauche/droite */
+}
+
+.feature-item.maquettiste .swiper-slide img {
+    max-width: 92%;             /* très léger zoom-out pour respirer */
+}
+/* Même largeur pour Motion Design et Maquettiste */
+
+/* On enlève la limite spéciale sur la carte Maquettiste */
+.feature-item.maquettiste {
+    max-width: none;      /* ou supprime totalement la règle max-width si tu l’as plus haut */
+}
+
+/* Le slider reste contenu à l’intérieur de la carte,
+   sans changer la largeur de la carte elle-même */
+.feature-item.maquettiste .swiper-container {
+    width: 100%;
+    max-width: 1000px;    /* largeur interne du slider, à ajuster si tu veux plus ou moins large */
+    margin: 0 auto;
+    padding: 25px 20px 10px;
 }
